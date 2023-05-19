@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Entity
 @Data
-public class Post {
+public class Post extends AmfBaseEntity{
     @Id
     @GeneratedValue
     private Long id;
