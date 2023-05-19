@@ -3,14 +3,18 @@ package com.factory.demo.post.model;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
-import lombok.Data;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Getter
+@Setter
 @NoArgsConstructor
+@AllArgsConstructor
 @Entity
-@Data
+@Builder
 public class Post extends AmfBaseEntity{
     @Id
     @GeneratedValue
@@ -18,4 +22,9 @@ public class Post extends AmfBaseEntity{
     private String title;
     private String content;
     private Author author;
+
+    public void update(String title, String content) {
+        this.title = title;
+        this.content = content;
+    }
 }
