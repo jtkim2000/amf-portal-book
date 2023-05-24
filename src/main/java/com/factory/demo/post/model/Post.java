@@ -1,5 +1,6 @@
 package com.factory.demo.post.model;
 
+import com.factory.demo.cmn.model.AmfBaseEntity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -15,7 +16,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @Entity
 @Builder
-public class Post extends AmfBaseEntity{
+public class Post extends AmfBaseEntity {
     @Id
     @GeneratedValue
     private Long id;

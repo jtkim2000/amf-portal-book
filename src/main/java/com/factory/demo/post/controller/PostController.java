@@ -1,5 +1,6 @@
 package com.factory.demo.post.controller;
 
+import com.factory.demo.post.dto.PostListResponseDto;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,6 +17,8 @@ import com.factory.demo.post.service.PostService;
 
 import lombok.RequiredArgsConstructor;
 
+import java.util.List;
+
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/v1/posts")
@@ -26,6 +29,11 @@ public class PostController {
     @PostMapping
     public Long save(@RequestBody PostSaveRequestDto requestDto) {
         return this.postsService.save(requestDto);
+    }
+
+    @GetMapping
+    public List<PostListResponseDto> findAllPosts(){
+        return this.postsService.findAllDesc();
     }
 
     // 게시글 수정
@@ -45,5 +53,4 @@ public class PostController {
     public PostResponseDto findById(@PathVariable Long id) {
         return this.postsService.findById(id);
     }
-    
 }

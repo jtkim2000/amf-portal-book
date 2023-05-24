@@ -1,4 +1,4 @@
-package com.factory.demo.post.model;
+package com.factory.demo.cmn.model;
 
 import lombok.Getter;
 import org.springframework.data.annotation.CreatedDate;
