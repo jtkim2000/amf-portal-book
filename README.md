@@ -17,6 +17,7 @@
 | Name | Type | Description    | Required |
 |-----|:----:|----------------|:--------:|
 |     | long | 생성된 사용자의 관리 ID |    X     |
+* 생성 실패 시 -1을 리턴함
 
 
 #### 회원 로그인 API
@@ -31,7 +32,11 @@
 ##### Response
 | Name |  Type   | Description         | Required |
 |-----|:-------:|---------------------|:--------:|
-|     | boolean | 성공시 true, 실패시 false |    X     |
+| login | boolean | 성공시 true, 실패시 false |    X     |
+|||::: 이하 필드는 성공시에만 포함됨 ::: | |
+| id | long | 사용자의 계정 관리 ID | |
+| name | String | 사용자의 이름 | |
+| email | String | 사용자의 이메일 | |
 
 
 ### 게시글
