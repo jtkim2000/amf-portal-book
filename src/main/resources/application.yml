@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: amf-portal-board
+    name: amf-portal-booklist
   profile:
     active: default
   profiles:
